@@ -67,8 +67,29 @@ namespace Assignment1
 
         //Question #3 Start __________________________________________________
         static void question3()
-        { 
+        using System;
+        using System.Linq;
 
+        public class GFG
+        {
+
+            // Returns minimum possible
+            // sum of all  min int[] arr
+            static int minSum(int[] arr, int n)
+            {
+                int min_val = arr.Sum();
+                return min_val;
+                ;
+            }
+
+            // Driver Code
+            static public void Main()
+            {
+                int[] A = { 2,3,5,6,9,40 };
+                int n = A.Length;
+                Console.WriteLine(minSum(A, n));
+
+            }
         }
 
         //Question #4 Start __________________________________________________
