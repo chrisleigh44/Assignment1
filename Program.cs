@@ -12,7 +12,10 @@ namespace Assignment1
             question1();
             question2();
             question3();
-            question4();
+            FreqSort("Dell");
+            FreqSort("eebhhh");
+            FreqSort("yYkk");
+            FreqSort("Hello world of Peanut Butter");
             question5();
             question6();
         }
@@ -72,8 +75,31 @@ namespace Assignment1
         }
 
         //Question #4 Start __________________________________________________
-        static void question4()
-        { 
+        static string FreqSort(string s)
+        {
+            Console.WriteLine(s);
+            Dictionary<char, int> freq = new Dictionary<char, int>();
+
+            // Create a dictionary of lower case characters and their frequency
+            foreach (char c in s)
+            {
+                if (freq.ContainsKey(c))
+                {
+                    Console.WriteLine("Contains Key {c}");
+                    freq[c]++;
+                }
+                else
+                {
+                    freq.Add(c, 1);
+                }
+            }
+            
+
+            string sorted_string = new string(s.OrderByDescending(c => freq[c]).ToArray());
+
+            Console.WriteLine(sorted_string);
+
+            return sorted_string;
 
         }
 
@@ -99,10 +125,10 @@ namespace Assignment1
                 resultlength = numblength2;
                 longarray = numbs2;
             }
-
+            
             int[] results = new int[resultlength];
             int[] distinctarray = longarray.Distinct().ToArray();
-
+            
             foreach(int i in longarray)
             {
                 int countnumb1 = numbs1.Count(i);
@@ -120,7 +146,7 @@ namespace Assignment1
                     }
                     for(int j=0; j <= loopcounter; j++)
                     {
-
+            
                     }
                 }
             }
