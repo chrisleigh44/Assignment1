@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace Assignment1;
 
@@ -77,6 +78,23 @@ internal class Program
         static void question3()
         {
 
+            // Returns minimum possible
+            // sum of all  min int[] arr
+            static int minSum(int[] arr, int n)
+            {
+                int min_val = arr.Sum();
+                return min_val;
+                ;
+            }
+
+            // Driver Code
+            static public void Main()
+            {
+                int[] A = { 2,3,5,6,9,40 };
+                int n = A.Length;
+                Console.WriteLine(minSum(A, n));
+
+            }
         }
 
         //Question #4 Start __________________________________________________
