@@ -135,66 +135,21 @@ internal class Program
         //Question #5 Start __________________________________________________
         static void question5()
         {
-            // int[] numbs1 = { 1, 2, 3, 3, 4, 5, 6 };
-            // int[] numbs2 = { 2, 3, 3, 4, 5 };
-            // int numblength1 = numbs1.Length;
-            // int numblength2 = numbs2.Length;
-            // int resultlength;
-            // int[] longarray;
-            //
-            //
-            //
-            // if (numblength1 > numblength2)
-            // {
-            //     resultlength = numblength1;
-            //     longarray = numbs1;
-            // }
-            // else
-            // {
-            //     resultlength = numblength2;
-            //     longarray = numbs2;
-            // }
-            //
-            // int[] results = new int[resultlength];
-            // int[] distinctarray = longarray.Distinct().ToArray();
-            //
-            // foreach (int i in longarray)
-            // {
-            //     int countnumb1 = numbs1.Count(i);
-            //     int countnumb2 = numbs2.Count(i);
-            //     int loopcounter;
-            //     if (countnumb1 + countnumb2 > 1)
-            //     {
-            //         if (countnumb1 > countnumb2)
-            //         {
-            //             loopcounter = countnumb1;
-            //         }
-            //         else
-            //         {
-            //             loopcounter = countnumb2;
-            //         }
-            //
-            //         for (int j = 0; j <= loopcounter; j++)
-            //         {
-            //
-            //         }
-            //     }
+            int[] numbs1 = { 1, 2, 2, 5, 6, 6 };
+            int[] numbs2 = { 2, 2, 5, 6, 6, 7 };
+            Console.WriteLine("The intersecting values are: ");
+            foreach (int num in numbs1)
+            {
+                int[] numb3 = { num };
+
+                int intersection = numb3.Intersect(numbs2).FirstOrDefault();
+
+                if (intersection != 0)
+                {
+                    Console.WriteLine(intersection);
+                }
+            }
         }
-
-
-        //initialize an array or list variable thats length/size is set to the longest length array numb1 / numb2; call it results
-        //determine the longer length array
-        //initialize a new array with distinct values of the longer array
-        //start a for loop
-        //for *each value in the distinct array, count how many times it appears in numbs1 - call it countnumb1
-        //for *each value in the distinct array, count how many times it appears in numbs2 - call it countnumb2
-        //if the value of countnumb1 + countnumb2  < 2, end loop and go to next number (no matches found) 
-        //if the value is 2 or larger proceed on
-        //create a new variable in the loop that contains the smaller count number (call it loopcounter)
-        //if countnumb1 < countnumb2, countnumb1 = loopcounter
-        //else countnumb2 = loopcounter
-        //add *each value to the results array / list by loopcounter times
-        //print the results of results array
 
     }
     //
