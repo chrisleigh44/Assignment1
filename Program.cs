@@ -87,6 +87,7 @@ internal class Program
             return reverse_word;
         }
 
+
         ;
 
         // Reverse array
@@ -109,6 +110,7 @@ internal class Program
 
             return outputPhrase;
         }
+
 
         //Question #3 Start __________________________________________________
         static int minSum(int[] arrayOfNumbers)
