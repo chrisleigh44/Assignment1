@@ -71,11 +71,18 @@ internal class Program
         //Question #2 Start __________________________________________________
         static void question2()
         {
-
+            //Establishing the input parameters
+            Console.WriteLine("Please provide your input");
+            string userInput = Console.ReadLine();
+            //subset (Split) each word using whitespace so that the individual array can be reversed
+            string revWord = string.Join(" ", userInput.Split(' ').Select(x => new String(x.Reverse().ToArray())));
+            {
+                Console.WriteLine(revWord);
+            }
         }
 
-        //Question #3 Start __________________________________________________
-        static void question3()
+            //Question #3 Start __________________________________________________
+            static void question3()
         {
 
             // Returns minimum possible
