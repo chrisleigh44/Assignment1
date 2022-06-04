@@ -82,27 +82,49 @@ internal class Program
         }
 
             //Question #3 Start __________________________________________________
-            static void question3()
-        {
-
-            // Returns minimum possible
-            // sum of all  min int[] arr
-            static int minSum(int[] arr, int n)
+           using System;
+           class GFG
             {
-                int min_val = arr.Sum();
-                return min_val;
-                ;
+
+
+                static int minSum(int[] arr, int n)
+                {
+                    int v = arr[0];
+                    int sum = v, rd = arr[0];
+
+                    for (int i = 1; i < n; i++)
+                    {
+
+                        if (arr[i] > rd)
+                        {
+                            sum = sum
+                                  + arr[i];
+                            rd = arr[i];
+                        }
+
+                        else
+                        {
+                            rd++;
+                            sum = sum + rd;
+                        }
+                    }
+
+                    return sum;
+                }
+
+                // Drivers code
+                public static void Main()
+                {
+
+                    int[] arr = { 2, 2, 3, 5, 6 };
+                    int n = arr.Length;
+
+                    Console.WriteLine(minSum(arr, n));
+                }
             }
 
-            // Driver Code
-            static public void Main()
-            {
-                int[] A = { 2,3,5,6,9,40 };
-                int n = A.Length;
-                Console.WriteLine(minSum(A, n));
 
-            }
-        }
+
 
         //Question #4 Start __________________________________________________
         static string FreqSort(string s)
